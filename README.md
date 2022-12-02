@@ -1,5 +1,7 @@
 # Getting Started with Create React App
 
+Jonathon starts work on 2/12/2002
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
