@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Counter from './components/counter';
 
 
 function Welcome(props) {
   return <h1>Hello, {props.name}</h1>;
 }
-
 
 function formatName(user) {
   return user.firstName + ' ' + user.lastName;
@@ -36,7 +36,7 @@ function tick() {
       <h2>It is {new Date().toLocaleTimeString()}.</h2>
     </div>
   );
-  root.render(element);
+  root.render(<Counter/>);
 }
 
 
