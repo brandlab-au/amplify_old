@@ -8,7 +8,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
-        <h1>This is stuff in Counter {this.state.count}</h1>
+        <h1>Data from Counter {this.state.count} : James here we go </h1>
         <button>inc</button>
       </div>
     );
