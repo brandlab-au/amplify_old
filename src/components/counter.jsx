@@ -10,9 +10,9 @@ class Counter extends Component {
 
   render() {
     return (
-      <div>
+      <div className="jumbotron text-center">
         <span>Data from Counter {this.formatCount()} : James here we go </span>
-        <button>inc</button>
+        <button className="btn btn-secondary btn-sm">Default</button>
       </div>
     );
   }
