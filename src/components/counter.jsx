@@ -6,13 +6,37 @@ import "bootstrap/dist/css/bootstrap.css";
 class Counter extends Component {
   state = {
     count: 10,
+    tags: ["tag1", "tag2", "tag3"],
+  };
+
+  styles = {
+    fontSize: 20,
+    fontWeight: "bold",
+  };
+
+  handleIncreament = () => {
+    console.log("clicked");
+    this.setState({ count: this.state.count + 1 });
   };
 
   render() {
     return (
       <div className="jumbotron text-center">
-        <span>Data from Counter {this.formatCount()} : James here we go </span>
-        <button className="btn btn-secondary btn-sm">Default</button>
+        <span style={this.styles}>
+          Data from Counter {this.formatCount()} :<br></br> James here we go
+          <br></br>
+        </span>
+        <button
+          className="btn btn-primary btn-sm"
+          onClick={this.handleIncreament}
+        >
+          Click here
+        </button>
+        <ul>
+          {this.state.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
       </div>
     );
   }
