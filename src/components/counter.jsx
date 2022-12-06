@@ -25,6 +25,18 @@ class Counter extends Component {
     return classes;
   }
 
+  renderTags() {
+    if (this.state.tags.length === 0) return <p>No tags yet pleaese add</p>;
+    return (
+      <ul>
+        {/* working on min 52:43 */}
+        {this.state.tags.map((tag) => (
+          <li key={tag}>{tag}</li>
+        ))}
+      </ul>
+    );
+  }
+
   render() {
     return (
       <div>
@@ -39,11 +51,7 @@ class Counter extends Component {
         >
           Click here
         </button>
-        <ul>
-          {this.state.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
+        {this.renderTags()}
       </div>
     );
   }
