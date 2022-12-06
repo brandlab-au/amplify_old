@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 class Counter extends Component {
   state = {
-    count: 10,
+    count: 11,
     tags: ["tag1", "tag2", "tag3"],
   };
 
@@ -21,11 +21,14 @@ class Counter extends Component {
 
   render() {
     return (
-      <div className="jumbotron text-center">
+      <div className="jumbotron text-left">
         <span style={this.styles}>
-          Data from Counter {this.formatCount()} :<br></br> James here we go
+          Data from Counter {this.formatCount()} :<br></br>
           <br></br>
         </span>
+        <button className="btn btn-primary btn-sm m-2">
+          {this.formatCount()}
+        </button>
         <button
           className="btn btn-primary btn-sm"
           onClick={this.handleIncreament}

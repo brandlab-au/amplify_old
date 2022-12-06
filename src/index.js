@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -30,12 +30,7 @@ const user = {
 
 
 function tick() {
-  const element = (
-    <div>
-      <h1>Hello, world! {getGreeting(user)}</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  );
+ 
   root.render(<Counter/>);
 }
 
