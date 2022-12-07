@@ -50,6 +50,12 @@ class Counter extends Component {
         >
           Click here
         </button>
+        <button
+          onClick={() => this.props.handleDelete(this.props.id)}
+          className="btn btn-danger btn-sm m-2"
+        >
+          Delete
+        </button>
         {/* {this.renderTags()} */}
       </div>
     );
