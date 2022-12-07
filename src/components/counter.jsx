@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.css";
 class Counter extends Component {
   state = {
     count: 0,
-    tags: ["tag1", "tag2", "tag3"],
   };
 
   styles = {
@@ -25,23 +24,23 @@ class Counter extends Component {
     return classes;
   }
 
-  renderTags() {
-    if (this.state.tags.length === 0) return <p>No tags yet pleaese add</p>;
-    return (
-      <ul>
-        {/* working on min 52:43 */}
-        {this.state.tags.map((tag) => (
-          <li key={tag}>{tag}</li>
-        ))}
-      </ul>
-    );
-  }
+  //   renderTags() {
+  //     if (this.state.tags.length === 0) return <p>No tags yet pleaese add</p>;
+  //     return (
+  //       <ul>
+  //         {/* working on min 52:43 */}
+  //         {this.state.tags.map((tag) => (
+  //           <li key={tag}>{tag}</li>
+  //         ))}
+  //       </ul>
+  //     );
+  //   }
 
   render() {
     return (
       <div>
         <span style={this.styles}>
-          Data from Counter {this.formatCount()} :<br></br>
+          Data from James {this.formatCount()} :<br></br>
           <br></br>
         </span>
         <button className={this.gerbadgeClasses()}>{this.formatCount()}</button>
@@ -51,7 +50,7 @@ class Counter extends Component {
         >
           Click here
         </button>
-        {this.renderTags()}
+        {/* {this.renderTags()} */}
       </div>
     );
   }
