@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 
 class Counter extends Component {
   state = {
-    count: 0,
+    count: this.props.count,
   };
 
   styles = {
@@ -37,11 +37,11 @@ class Counter extends Component {
   //   }
 
   render() {
+    console.log("pro", this.props);
     return (
       <div>
         <span style={this.styles}>
           Data from James {this.formatCount()} :<br></br>
-          <br></br>
         </span>
         <button className={this.gerbadgeClasses()}>{this.formatCount()}</button>
         <button
